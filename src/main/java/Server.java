@@ -15,7 +15,7 @@ public class Server implements TCPConnectionListener{
 
     private Server() {
         System.out.println("Server running...");
-        try (ServerSocket serverSocket = new ServerSocket(8189)) {
+        try (ServerSocket serverSocket = new ServerSocket(443)) {
             while (true) {
                 try {
                     new TCPConnection(this, serverSocket.accept());
